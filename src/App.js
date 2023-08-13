@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './homepage/Header';
 import Home from './pages/Home';
 import Dir_Report from './pages/Dir_Report';
+
 import Place_officer from './pages/Place_officer';
 
 import Po_search from './pages/Po_search';
@@ -14,6 +15,7 @@ import Report from './officers/Report';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import AddUser from './users/AddUser';
 import Adddrive from './Drive/Adddrive';
+import D_drive from './Drive/D_drive';
 import EditUser from './users/EditUser';
 import ViewUser from './users/ViewUser';
 import AddReport from './officers/AddReport';
@@ -29,8 +31,10 @@ export default function App() {
       <Routes>
         
         <Route exact path="/header" Component={Header}></Route>
+
         <Route exact path="/login" element={<Dir_Login/>}/>
       <Route exact path="/login2" element={<Po_Login/>}/>
+      
       <Route exact path="/Home" element={<Home/>}/>
       
         <Route exact path="/Place_officer" element={<Place_officer/>}/>
@@ -46,6 +50,7 @@ export default function App() {
         <Route exact path="/viewreport/:id" element={<ViewReport/>}/>
 
         <Route exact path="/drive" element={<Adddrive/>}/>
+        <Route exact path="/D_drive" element={<D_drive/>}/>
         <Route exact path="/adduser" element={<AddUser/>}/>
         <Route exact path="/edituser/:id" element={<EditUser/>}/>
         

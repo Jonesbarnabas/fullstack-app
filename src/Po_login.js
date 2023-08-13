@@ -40,7 +40,7 @@ export default function Po_Login() {
                 <h1 >Placement officer Login</h1>
             </div>
             <div style={{ background: 'dark',marginLeft:'auto',marginRight:'auto',marginTop:'5%',width:'30%'}}>
-                <div className='p-5 bg-primary w-10' style={{ border: '3px solid red', borderTopLeftRadius: 25, borderTopRightRadius: 25, borderBottomLeftRadius: 25, borderBottomRightRadius: 25 }}>
+                <div className='p-5 bg-primary w-10' style={{marginBottom:"10%",border: '3px solid red', borderTopLeftRadius: 25, borderTopRightRadius: 25, borderBottomLeftRadius: 25, borderBottomRightRadius: 25 }}>
                     <form onSubmit={onSubmit}>
                         <div className='mb-3'>
                             <label htmlFor='username'>Username</label>

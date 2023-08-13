@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'; // Import the Link component from React Router
 import axios from 'axios';
 
 export default function Po_search(props) {
@@ -46,7 +47,7 @@ export default function Po_search(props) {
           <tbody>
             {officerData
               .filter((item) => {
-                return search === '' ? item : item.name.includes(search);
+                return search === '' ? item : item.comp_name.toLowerCase().includes(search.toLowerCase());
               })
               .map((item, index) => (
                 <tr key={item.id}>
@@ -64,6 +65,8 @@ export default function Po_search(props) {
             <tr></tr>
           </tbody>
         </Table>
+        {/* Add some text or content inside the Link component */}
+        <Link className="btn btn-danger" to={"/Place_officer"}>Back</Link>
       </Container>
     </div>
   );

@@ -26,8 +26,8 @@ export default function AddUser() {
     };
   return (
     <div className="container">
-        <div className="row">
-            <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        <div className="row" style={{marginTop:'5rem'}}>
+            <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow" style={{background:'lightblue',height:'450px'}}>
                 <h2 className="text-center m-4 ">Register Placement officer</h2>
                 <form onSubmit={(e)=>onSubmit(e)}>
                 <div className="mb-3">

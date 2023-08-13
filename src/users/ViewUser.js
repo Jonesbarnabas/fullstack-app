@@ -26,8 +26,8 @@ export default function ViewUser() {
   return (
 
         <div className="container">
-        <div className="row">
-            <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
+        <div className="row" style={{marginTop:'5rem'}}>
+            <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow" style={{background:'lightblue',height:'350px'}}>
                 <h2 className="text-center m-4 ">Placement officer details</h2>
                 <div className="card">
                     <div className="card-header">

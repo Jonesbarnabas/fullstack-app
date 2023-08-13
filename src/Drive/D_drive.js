@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect ,useParams} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function Adddrive() {
+export default function D_drive() {
 
     let navigate=useNavigate()
     const [drive,setDrive] = useState({
@@ -32,7 +32,8 @@ export default function Adddrive() {
     const onSubmit=async(e)=> {
        e.preventDefault();
        await axios.post("http://localhost:8080/drive",drive)
-       navigate("/Place_officer")
+       navigate("/Home")
+       
     };
 
   return (
@@ -75,15 +76,15 @@ export default function Adddrive() {
                         <br></br> 
                         <label htmlFor="off_name" className="text-align-right form-lable ">Officer Name:</label><br/>
                         <input type={"text"} className="form" placeholder="Enter your company name"name="off_name"
-                        value={cmp_name}
+                        value={off_name}
                         onChange={(e)=>onInputChange(e)}
                         />
                         <br></br>
                         <br></br>
                     </div>
                     <hr></hr>
-                    <button type="submit" className="btn btn-outline-primary" to ="/Place_officer">Submit</button>
-                      <Link className="btn btn-outline-danger mx-2" to = "/Place_officer">Cancel</Link>
+                    <button type="submit" className="btn btn-outline-primary" to ="/Home">Submit</button>
+                      <Link className="btn btn-outline-danger mx-2" to = "/Home">Cancel</Link>
                 </form>
             </div>
         </div>
