@@ -26,12 +26,12 @@ export default function EditUser() {
 
     const onSubmit=async(e)=> {
         e.preventDefault();
-        await axios.put(`http://localhost:8080/user/${id}`,user)
+        await axios.put(`https://e201-223-182-244-152.ngrok-free.app/user/${id}`,user)
         navigate("/Home")
     };
 
     const loadUsers=async()=>{
-        const result=await axios.get(`http://localhost:8080/user/${id}`)
+        const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/user/${id}`)
         setUser(result.data)
     }
   return (

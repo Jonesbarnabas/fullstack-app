@@ -22,7 +22,7 @@ export default function AddReport() {
     //   }, []);
     const fetchOfficers = async () => {
         try {
-          const res = await axios.get(`http://localhost:8080/officer`);
+          const res = await axios.get(`https://e201-223-182-244-152.ngrok-free.app/officer`);
           const fetchOfficers = await res.json();
           setOfficer(fetchOfficers);
         } catch (error) {
@@ -38,7 +38,7 @@ export default function AddReport() {
 
     const onSubmit=async(e)=> {
        e.preventDefault();
-       await axios.post("http://localhost:8080/officer",officer)
+       await axios.post("https://e201-223-182-244-152.ngrok-free.app/officer",officer)
        navigate("/Place_officer")
     };
 

@@ -21,18 +21,18 @@ useEffect(()=>{
 },[]);
 
 const loadDrive= async ()=>{
-    const result=await axios.get(`http://localhost:8080/drive1`)
+    const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/drive1`)
     setDrive(result.data);
     console.log(result.data);
 };
 
   const loadOfficer=async()=>{
-    const result=await axios.get("http://localhost:8080/officer");
+    const result=await axios.get("https://e201-223-182-244-152.ngrok-free.app/officer");
     setOfficer(result.data);
   } 
 
   const deleteofficer=async(id)=>{
-    await axios.delete(`http://localhost:8080/officer/${id}`)
+    await axios.delete(`https://e201-223-182-244-152.ngrok-free.app/officer/${id}`)
     loadOfficer()
   }
   return (

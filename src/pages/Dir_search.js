@@ -13,7 +13,7 @@ export default function Dir_search(){
 
   useEffect(() => {
     const getOfficer = async () => {
-      const res = await fetch('http://localhost:8080/officer1');
+      const res = await fetch('https://e201-223-182-244-152.ngrok-free.app/officer1');
       const officerData = await res.json();
       setOfficerData(officerData);
     };

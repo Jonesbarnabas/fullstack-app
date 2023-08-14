@@ -32,12 +32,12 @@ export default function EditReport() {
 
     const onSubmit=async(e)=> {
         e.preventDefault();
-        await axios.put(`http://localhost:8080/officer/${id}`,officer)
+        await axios.put(`https://e201-223-182-244-152.ngrok-free.app/officer/${id}`,officer)
         navigate("/Place_officer")
     };
 
     const loadOfficer=async()=>{
-        const result=await axios.get(`http://localhost:8080/officer/${id}`)
+        const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/officer/${id}`)
         setOfficer(result.data)
     }
   return (

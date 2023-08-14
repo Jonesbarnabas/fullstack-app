@@ -22,7 +22,7 @@ export default function Report() {
     },[]);
 
     const loadOfficer=async ()=>{
-        const result=await axios.get(`http://localhost:8080/officer/${id}`)
+        const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/officer/${id}`)
         setOfficer(result.data);
     };
 

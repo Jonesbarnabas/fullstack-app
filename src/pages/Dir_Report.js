@@ -10,7 +10,7 @@ export default function Dir_Login() {
   useEffect(()=>{
     loadOfficer();
     const getofficer=async()=>{
-      const res=await fetch('http://localhost:8080/officer');
+      const res=await fetch('https://e201-223-182-244-152.ngrok-free.app/officer');
       const getofficer = await res.json();
       setOfficer(getofficer);
       console.log(getofficer);
@@ -21,12 +21,12 @@ export default function Dir_Login() {
 
 
   const loadOfficer=async()=>{
-    const result=await axios.get("http://localhost:8080/officer");
+    const result=await axios.get("https://e201-223-182-244-152.ngrok-free.app/officer");
     setOfficer(result.data);
   } 
 
   const deleteofficer=async(id)=>{
-    await axios.delete(`http://localhost:8080/officer/${id}`)
+    await axios.delete(`https://e201-223-182-244-152.ngrok-free.app/officer/${id}`)
     loadOfficer()
   }
   return (

@@ -14,7 +14,7 @@ useEffect(()=>{
 },[]);
 
 const loadDrive= async ()=>{
-    const result=await axios.get(`http://localhost:8080/drive1`)
+    const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/drive1`)
     setDrive(result.data);
     console.log(result.data);
 };
@@ -26,12 +26,12 @@ const loadDrive= async ()=>{
     },[]);
 
     const loadUsers=async()=>{
-        const result=await axios.get("http://localhost:8080/users")
+        const result=await axios.get("https://e201-223-182-244-152.ngrok-free.app/users")
         setUsers(result.data);
     };
 
     const deleteUser=async(id)=>{
-      await axios.delete(`http://localhost:8080/user/${id}`)
+      await axios.delete(`https://e201-223-182-244-152.ngrok-free.app/user/${id}`)
       loadUsers()
     }
     

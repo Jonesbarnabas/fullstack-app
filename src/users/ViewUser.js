@@ -17,7 +17,7 @@ export default function ViewUser() {
     },[]);
 
     const loadUsers=async ()=>{
-        const result=await axios.get(`http://localhost:8080/user/${id}`)
+        const result=await axios.get(`https://e201-223-182-244-152.ngrok-free.app/user/${id}`)
         setUser(result.data);
     };
 

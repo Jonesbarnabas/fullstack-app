@@ -14,7 +14,7 @@ export default function D_drive() {
 
     const fetchDrive = async () => {
         try {
-          const res = await axios.get(`http://localhost:8080/drive`);
+          const res = await axios.get(`https://e201-223-182-244-152.ngrok-free.app/drive`);
           const fetchDrive = await res.json();
           setDrive(fetchDrive);
         } 
@@ -31,7 +31,7 @@ export default function D_drive() {
 
     const onSubmit=async(e)=> {
        e.preventDefault();
-       await axios.post("http://localhost:8080/drive",drive)
+       await axios.post("https://e201-223-182-244-152.ngrok-free.app/drive",drive)
        navigate("/Home")
        
     };

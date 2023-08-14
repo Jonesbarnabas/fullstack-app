@@ -11,7 +11,7 @@ export default function Dir_Login() {
     const onSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8080/login2", 
+            const response = await axios.post("https://e201-223-182-244-152.ngrok-free.app/login2", 
             {
                 username: username,
                 password: password
